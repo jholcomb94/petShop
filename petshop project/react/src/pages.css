@@ -1,0 +1,24 @@
+.page{
+    padding-top: 50px;
+    background-color: lightpink;
+    height: 44.8vw;
+}
+.table{
+    width:100%;
+    border-width: 3px;
+    border-style: solid;
+
+}
+.button1{
+    width: 100px;
+    height: 25px;
+}
+.button2{
+    width: 400px;
+    height: 100px;
+    font-size: larger;
+    border-radius: 10px;
+    border-width: 5px;
+    background-color: rgb(182, 156, 209);
+    border-color: black;
+}
