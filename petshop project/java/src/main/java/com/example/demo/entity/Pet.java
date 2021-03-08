@@ -20,7 +20,7 @@ public class Pet {
     @Column(name = "zip")
     private int zip;
     @Column(name = "shelter")
-    private int shelter;
+    private String shelter;
     @Column(name = "image")
     private String image;
 
@@ -72,11 +72,11 @@ public class Pet {
         this.zip = zip;
     }
 
-    public int getShelter() {
+    public String getShelter() {
         return shelter;
     }
 
-    public void setShelter(int shelter) {
+    public void setShelter(String shelter) {
         this.shelter = shelter;
     }
 

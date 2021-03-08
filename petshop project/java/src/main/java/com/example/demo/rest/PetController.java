@@ -44,7 +44,7 @@ public class PetController {
     }
 
     @PostMapping("/addPet")
-    public Pet addCustomer(@RequestBody Pet pet)
+    public Pet addPet(@RequestBody Pet pet)
     {
         pet.setId(0);
         crud.update(pet);

@@ -43,7 +43,7 @@ public class ShelterController {
     }
 
     @PostMapping("/addShelter")
-    public Shelter addCustomer(@RequestBody Shelter shelter)
+    public Shelter addShelter(@RequestBody Shelter shelter)
     {
         shelter.setId(0);
         crud.update(shelter);
