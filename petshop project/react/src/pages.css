@@ -1,7 +1,7 @@
 .page{
     padding-top: 50px;
     background-color: lightpink;
-    height: 44.8vw;
+    height: 100vh;
 }
 .table{
     width:100%;
@@ -21,4 +21,14 @@
     border-width: 5px;
     background-color: rgb(182, 156, 209);
     border-color: black;
+}
+.image{
+    height: 100px;
+    width: 100px;
+}
+.tabledata{
+    border-width: 2px;
+    border-color: rgb(3, 36, 49);
+    border-style: solid;
+    border-radius: 5px;
 }

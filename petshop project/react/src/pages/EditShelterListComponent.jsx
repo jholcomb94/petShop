@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import ShelterDataService from '../services/ShelterDataService';
+import PetDataService from '../services/PetDataService';
 class  EditShelterListComponent extends Component{
     constructor(props){
         super(props)
         this.state ={
             Shelter:[],
+            pets: [], 
             shelterName: "",
             shelterAddress: "",
             shelterID: 0
@@ -32,8 +34,16 @@ class  EditShelterListComponent extends Component{
                     
                 })
                 console.log(response.data)
-             }
-        )
+             })
+
+        PetDataService.retrieveAllPets()
+        .then( response => {
+            this.setState({
+                pets: response.data
+            })
+            console.log(response.data)
+        })
+        
     }
     handleShelterAdd(){
         let newShelter ={
@@ -55,6 +65,17 @@ class  EditShelterListComponent extends Component{
         this.refreshList()
     }
     handleShelterDelete(){
+        ShelterDataService.retreiveShelter(this.state.shelterID).then(
+            response => {
+                const result = this.state.pets.filter(pet => pet.shelter == response.data.name)
+                console.log(response.data.name)
+                result.map(
+                    pet => PetDataService.deletePet(pet.id)
+                )
+                
+            }
+            
+        )
         ShelterDataService.deleteShelter(this.state.shelterID)
         alert("deleted shelter with id: " + this.state.shelterID)
     }

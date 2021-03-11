@@ -116,7 +116,7 @@ class  EditPetListComponent extends Component{
                                         <td>{Pet.description}</td>
                                         <td>{Pet.zip}</td>
                                         <td>{Pet.shelter}</td>
-                                        <td><img src = {Pet.image} alt ="" ></img></td>
+                                        <td><img src = {Pet.image} alt ="" style = {{height:"200px", width: "200px"}} ></img></td>
                                     </tr>
                                 )
                                 
